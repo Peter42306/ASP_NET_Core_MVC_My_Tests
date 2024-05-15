@@ -1,0 +1,46 @@
+﻿@model ArrayModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Numbers</title>
+</head>
+<body>
+    <h2>This array is fixed in NumbersControllers</h2>
+    <hr />
+    <h3>Array of @ViewBag.Size numbers from @ViewBag.Start to @ViewBag.End, min number is @ViewBag.MinNumber, max number is @ViewBag.MaxNumber</h3>
+
+    @* @{
+    int lineNumber = 1;
+    } *@
+
+    @foreach (var number in Model.AllNumbers)
+    {
+        @number
+        @:
+    }
+    <br />
+    <hr />
+    <h3>Even numbers in  the array above, total @ViewBag.QuantityEven, min number is @ViewBag.MinEvenNumber, max number is @ViewBag.MaxEvenNumber</h3>
+
+    @foreach (var number in Model.EvenNumbers)
+    {
+        @number
+        @:
+    }
+
+    <br />
+    <hr />
+    <h3>Odd numbers in  the array above, total @ViewBag.QuantityOdd, min number is @ViewBag.MinOddNumber, max number is @ViewBag.MaxOddNumber</h3>
+
+    @foreach (var number in Model.OddNumbers)
+    {
+        @number
+        @:
+    }
+
+    <br />
+    <hr />
+    <br />
+</body>
+</html>
